@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>BLE Code</title> 
+        <style>
+            table {
+                margin: auto;
+                width: 10%;
+                border: 3px solid cadetblue;
+                padding: 10px;
+            }
+        </style> 
+    </head> 
+        
+    <body> 
+        <script>
+            function submitMe(input) {
+                alert(hash16(input)); //should output text box input
+            }
+            function hash16(input) {
+                let hash = input * 42069;
+                return ((hash >>> 16) ^ hash) & 0xFFFF;
+            }
+        </script>
+        <img src="avatar.png" alt="SSE Bikes" style="display:block;margin:auto;width:10%;padding:10px;border-radius:50%;">
+        <table>
+            <tr>
+                <td >Enter last 4 digits of Device S/N</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="test"  value="" style="display:block;margin:auto;"/></td>
+            </tr>
+            <tr>
+                <td><button onclick="submitMe(document.getElementById('test').value)" id="testButton" style="display:block;margin:auto;"" >Get Unlock Code</button></td>
+            </tr>
+        </table>
+    </body> 
+</html> 
